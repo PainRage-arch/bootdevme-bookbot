@@ -4,7 +4,7 @@ def main():
     
     with open("books/frankenstein.txt") as file:
         content = file.read()
-    
+    num_characters = get_num_characters(content)
     num_words = get_num_words(content)
     print(f"Found {num_characters} total characters")    
     print(f"Found {num_words} total words")
