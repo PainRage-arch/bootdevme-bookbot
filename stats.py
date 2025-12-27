@@ -11,4 +11,6 @@ def get_num_characters(content):
             character_count[char.lower()] += 1
     return character_count
 def sort_dictionary_by_value(character_count):
+    list_items = []
+    
     return dict(sorted(character_count.items(), key=lambda item: item[1], reverse=True))
