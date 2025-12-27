@@ -10,7 +10,11 @@ def get_num_characters(content):
         else:
             character_count[char.lower()] += 1
     return character_count
+
 def sort_dictionary_by_value(character_count):
-    list_items = []
-    
-    return dict(sorted(character_count.items(), key=lambda item: item[1], reverse=True))
+    list_items = {}
+    list_items = dict(sorted(character_count.items(), key=lambda item: item[1], reverse=True))
+    for l, v in list_items.items():
+        if l.isalpha():
+            print(f"{l}: {v}")
+    return list_items
