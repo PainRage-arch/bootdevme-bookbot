@@ -1,8 +1,12 @@
+import sys
 from stats import get_num_words
 from stats import get_num_characters
 from stats import sort_dictionary_by_value
 def main():
-    directory = "books/frankenstein.txt"
+    if len(sys.argv) != 2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1) 
+    directory = sys.argv[1]
     with open(directory) as file:
         content = file.read()
     num_characters = get_num_characters(content)
